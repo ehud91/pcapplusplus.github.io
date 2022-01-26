@@ -78,36 +78,36 @@ const config = {
               },
             ],
           },
-          {
-            href: 'https://groups.google.com/d/forum/pcapplusplus-support',
-            position: 'right',
-            label: 'Google Group',
-            title: 'PcapPlusPlus Google Group'
-          },
-          {
-            href: 'mailto:pcapplusplus@gmail.com',
-            position: 'right',
-            label: 'Email',
-            title: 'Send us an email'
-          },
-          {
-            href: 'https://stackoverflow.com/questions/tagged/pcapplusplus',
-            position: 'right',
-            label: 'StackOverflow',
-            title: 'PcapPlusPlus tag on StackOverflow'
-          },
-          {
-            href: 'https://twitter.com/seladb',
-            position: 'right',
-            label: 'Twitter',
-            title: 'PcapPlusPlus on Twitter'
-          },
-          {
-            href: 'https://github.com/seladb/PcapPlusPlus',
-            position: 'right',
-            label: 'GitHub',
-            title: 'PcapPlusPlus on GitHub'
-          },
+          // {
+          //   href: 'https://groups.google.com/d/forum/pcapplusplus-support',
+          //   position: 'right',
+          //   label: 'Google Group',
+          //   title: 'PcapPlusPlus Google Group'
+          // },
+          // {
+          //   href: 'mailto:pcapplusplus@gmail.com',
+          //   position: 'right',
+          //   label: 'Email',
+          //   title: 'Send us an email'
+          // },
+          // {
+          //   href: 'https://stackoverflow.com/questions/tagged/pcapplusplus',
+          //   position: 'right',
+          //   label: 'StackOverflow',
+          //   title: 'PcapPlusPlus tag on StackOverflow'
+          // },
+          // {
+          //   href: 'https://twitter.com/seladb',
+          //   position: 'right',
+          //   label: 'Twitter',
+          //   title: 'PcapPlusPlus on Twitter'
+          // },
+          // {
+          //   href: 'https://github.com/seladb/PcapPlusPlus',
+          //   position: 'right',
+          //   label: 'GitHub',
+          //   title: 'PcapPlusPlus on GitHub'
+          // },
         ],
       },
       footer: {

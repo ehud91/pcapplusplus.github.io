@@ -5,11 +5,13 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Button from './Button';
+import Social from './Social';
 
 const Header = (): JSX.Element => {
+
     const {siteConfig} = useDocusaurusContext();
     return (
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>        
         <TwoColumns
           columnOne={<img alt="" src={useBaseUrl('img/landing-page/logo.svg')} />}
           columnTwo={
@@ -23,6 +25,7 @@ const Header = (): JSX.Element => {
             </div>
           }
         />
+        <Social />       
       </header>
     );
   };

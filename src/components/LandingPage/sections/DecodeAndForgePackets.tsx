@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Body from '../components/Body';
 import styles from '../components/Styles';
 import TwoColumns from '../components/TwoColumns';
@@ -8,6 +8,16 @@ import CodeBlock from '@theme/CodeBlock';
 
 
 const DecodeAndForgePackets = (): JSX.Element  => {
+
+    const [showText, setShowText] = useState(true);
+
+    useEffect(() => {
+      window.addEventListener('scroll', () => {
+          if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {            
+              setShowText(false);
+          }
+      });
+    },[]);
 
     return (
         <Body className={styles.NativeApps} background="light">
@@ -46,6 +56,7 @@ const DecodeAndForgePackets = (): JSX.Element  => {
                 }
             </CodeBlock>
             }
+            isDisplay={showText}
         />
         </Body>
     );

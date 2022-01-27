@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Body from '../components/Body';
 import TwoColumns from '../components/TwoColumns';
 import TextColumn from '../components/TextColumn';
@@ -8,6 +8,17 @@ import CodeBlock from '@theme/CodeBlock';
 
 
 const ReadWritePackets = (): JSX.Element  => {
+
+    const [showText, setShowText] = useState(true);
+
+    useEffect(() => {
+      window.addEventListener('scroll', () => {
+          if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {            
+              setShowText(false);
+          }
+      });
+    },[]);
+
     return (
       <Body className={styles.NativeApps} background="light">
         <TwoColumns
@@ -45,6 +56,7 @@ const ReadWritePackets = (): JSX.Element  => {
             }
           </CodeBlock>
         }
+        isDisplay={showText}
         />
       </Body>
     );

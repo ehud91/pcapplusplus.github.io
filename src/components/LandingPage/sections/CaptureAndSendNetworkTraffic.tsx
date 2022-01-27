@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Body from '../components/Body';
 import styles from '../components/Styles';
 import TwoColumns from '../components/TwoColumns';
@@ -8,8 +8,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 const CaptureAndSendNetworkTraffic = (): JSX.Element  => {
+
+    const [showText, setShowText] = useState(true);
+
+    useEffect(() => {
+      window.addEventListener('scroll', () => {
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {            
+              setShowText(false);
+          }
+      });
+    },[]);
+
     return (
-      <Body className={styles.NativeApps} background="light">
+      <Body className={styles.NativeApps + ' capture-and-send-network-traffic'} background="light">
         <TwoColumns
           columnOne={<img alt="" src={useBaseUrl('img/landing-page/capture-engines.png')} />}
           columnTwo={
@@ -26,6 +37,7 @@ const CaptureAndSendNetworkTraffic = (): JSX.Element  => {
               }
             />
           }
+          isDisplay={showText}
         />
       </Body>
     );

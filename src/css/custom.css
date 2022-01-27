@@ -142,6 +142,7 @@ html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1000;
 }
 
 .toggle-btn.active {
@@ -237,4 +238,85 @@ html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
     transition: 0.9s ease !important;    
   }
 
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 800px){
+
+  .hero__subtitle {
+    width: 300px;
+  }
+
+  .button {
+    width: 120px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .hero.hero--primary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TwoColumns_src-pages-index-module .column_src-pages-index-module.first_src-pages-index-module {
+    margin: 60px 0;
+  }
+
+  .column_src-pages-index-module.last_src-pages-index-module.right_src-pages-index-module {
+    width: 280px;
+    margin: 80px 30px;
+  }
+
+  .Section_src-pages-index-module {
+    padding-left: 50px;
+  }
+
+  .column_src-pages-index-module.last_src-pages-index-module.right_src-pages-index-module {
+    margin: 50px 0px;
+  }
+
+  .Section_src-pages-index-module.NativeApps_src-pages-index-module.light {
+    margin: 0;
+    padding: 0;
+  }
+
+  .language-cpp.theme-code-block {
+    width: 320px;
+    font-size: 0.70rem;
+  }
+
+  .column_src-pages-index-module.last_src-pages-index-module.right_src-pages-index-module {
+    margin: 20px;
+  }
+
+  .button.button--lg.landingBtn_src-pages-index-module {
+    width: auto;
+  }
+
+  .language-cpp.theme-code-block .cpp {
+    font-size: 0.65rem;
+  }
+
+  .packets-reassembly .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module h2, 
+  .packets-reassembly .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module p, 
+  .packets-reassembly .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module .button {
+      margin-left: 20px;
+  }
+  
+  .multi-platform-support  .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module h2, 
+  .multi-platform-support  .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module p, 
+  .multi-platform-support  .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module .button {
+      margin-left: 20px;      
+  }
+  
+  .capture-and-send-network-traffic .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module h2, 
+  .capture-and-send-network-traffic .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module p, 
+  .capture-and-send-network-traffic .column_src-pages-index-module.first_src-pages-index-module.left_src-pages-index-module .button {
+    margin-left: 20px;  
+  }
+
+  .footer {
+    font-size: 1.5rem;
+    padding: 60px 50px;
+  }
 }

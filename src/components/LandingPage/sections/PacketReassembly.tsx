@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Body from '../components/Body';
 import TwoColumns from '../components/TwoColumns';
 import TextColumn from '../components/TextColumn';
@@ -9,8 +9,18 @@ import styles from '../components/Styles';
 
 const PacketReassembly = (): JSX.Element  => {
     
+    const [showText, setShowText] = useState(true);
+
+    useEffect(() => {
+      window.addEventListener('scroll', () => {
+          if (document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200) {            
+              setShowText(false);
+          }
+      });
+    },[]);
+
     return (
-      <Body className={styles.NativeApps} background="light">
+      <Body className={styles.NativeApps + ' packets-reassembly'} background="light">
         <TwoColumns
           columnOne={<img alt="" src={useBaseUrl('img/landing-page/stream.png')} />}
           columnTwo={
@@ -32,6 +42,7 @@ const PacketReassembly = (): JSX.Element  => {
               }
             />
           }
+          isDisplay={showText}
         />
       </Body>
     );

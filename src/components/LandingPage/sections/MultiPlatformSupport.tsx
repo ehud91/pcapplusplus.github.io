@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Body from '../components/Body';
 import styles from '../components/Styles';
 import TwoColumns from '../components/TwoColumns';
@@ -8,8 +8,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 const MultiPlatformSupport = (): JSX.Element  => {
+
+  const [showText, setShowText] = useState(true);
+
+    useEffect(() => {
+      window.addEventListener('scroll', () => {
+          if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {            
+              setShowText(false);
+          }
+      });
+    },[]);
+
     return (
-      <Body className={styles.NativeApps} background="light">
+      <Body className={styles.NativeApps + ' multi-platform-support'} background="light">
         <TwoColumns
           columnOne={<img alt="" src={useBaseUrl('img/landing-page/supported-os.png')} />}
           columnTwo={
@@ -25,6 +36,7 @@ const MultiPlatformSupport = (): JSX.Element  => {
               }
             />
           }
+          isDisplay={showText}
         />
       </Body>
     );
